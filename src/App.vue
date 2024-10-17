@@ -3,8 +3,27 @@ import moment from 'moment';
 import Avatar from './components/Avatar.vue';
 import Profile from './components/Profile.vue';
 import FloatingNav from './components/FloatingNav.vue';
+import QuestBar from './components/QuestBar.vue';
 
 const today = moment(new Date()).format('dddd, DD MMMM YYYY');
+
+const quests = [
+  {
+    icon: '/src/assets/icons/run.svg',
+    title: 'Run 2 kilometer',
+    exp: '100',
+  },
+  {
+    icon: '/src/assets/icons/run.svg',
+    title: 'Read 4 pages of the Quran or more',
+    exp: '1000',
+  },
+  {
+    icon: '/src/assets/icons/run.svg',
+    title: 'Pray the Salah 5 times',
+    exp: '2000',
+  },
+];
 </script>
 
 <template>
@@ -17,6 +36,14 @@ const today = moment(new Date()).format('dddd, DD MMMM YYYY');
     <!-- <TheWelcome /> -->
     <Avatar />
     <Profile />
+    <div class="quest-wrapper">
+      <QuestBar
+        v-for="quest in quests"
+        :icon="quest.icon"
+        :title="quest.title"
+        :exp="quest.exp"
+      />
+    </div>
   </main>
 
   <FloatingNav />
@@ -49,6 +76,13 @@ header {
     flex-direction: column;
     align-items: center;
     margin-top: 28px;
+  }
+
+  .quest-wrapper {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 }
 </style>
