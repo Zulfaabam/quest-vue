@@ -1,6 +1,8 @@
 <script setup>
 import moment from 'moment';
 import Avatar from './components/Avatar.vue';
+import Profile from './components/Profile.vue';
+import FloatingNav from './components/FloatingNav.vue';
 
 const today = moment(new Date()).format('dddd, DD MMMM YYYY');
 </script>
@@ -14,10 +16,10 @@ const today = moment(new Date()).format('dddd, DD MMMM YYYY');
   <main>
     <!-- <TheWelcome /> -->
     <Avatar />
-    <h2>Abam</h2>
-    <progress></progress>
-    <p>Level 1</p>
+    <Profile />
   </main>
+
+  <FloatingNav />
 </template>
 
 <style scoped>
@@ -35,7 +37,7 @@ header {
 
   header h1 {
     font-size: 64px;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   header p {
