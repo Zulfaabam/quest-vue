@@ -14,9 +14,9 @@ const props = defineProps(['title', 'exp', 'icon']);
       </div>
     </div>
     <div>
-      <button>Achieved</button>
+      <button class="quest-btn achieved">Achieved</button>
       <span>/</span>
-      <button>Not achieved</button>
+      <button class="quest-btn not-achieved">Not achieved</button>
     </div>
   </div>
 </template>
@@ -54,5 +54,18 @@ const props = defineProps(['title', 'exp', 'icon']);
 .quest-exp {
   font-size: 14px;
   color: var(--light-blue);
+}
+.quest-btn {
+  font-size: 20px;
+  border: none;
+  background: none;
+  font-family: var(--pixel-font);
+  cursor: pointer;
+}
+.achieved {
+  color: var(--teal);
+}
+.not-achieved {
+  color: #f97676;
 }
 </style>

@@ -4,6 +4,7 @@ import Avatar from './components/Avatar.vue';
 import Profile from './components/Profile.vue';
 import FloatingNav from './components/FloatingNav.vue';
 import QuestBar from './components/QuestBar.vue';
+import StarIcon from './components/icons/StarIcon.vue';
 
 const today = moment(new Date()).format('dddd, DD MMMM YYYY');
 
@@ -28,7 +29,11 @@ const quests = [
 
 <template>
   <header>
-    <h1>Daily Quest</h1>
+    <div style="position: relative">
+      <h1>Daily Quest</h1>
+      <StarIcon class="star-bottom" />
+      <StarIcon class="star-top" />
+    </div>
     <p>{{ today }}</p>
   </header>
 
@@ -55,6 +60,18 @@ header {
   align-items: center;
   justify-content: space-between;
   /* border: 1px solid red; */
+}
+
+.star-top {
+  position: absolute;
+  top: -8px;
+  right: -20px;
+}
+
+.star-bottom {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
 }
 
 @media (min-width: 1024px) {
