@@ -58,6 +58,11 @@ const navItems = [
     width: 500px;
     height: 80px;
   }
+
+  .floating-nav ul li a img {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 @keyframes bounce {
