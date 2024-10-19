@@ -16,14 +16,45 @@
 }
 
 .username {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 500;
   color: var(--teal);
   line-height: 1;
 }
 
 .level {
-  font-size: 16px;
+  font-size: 12px;
   color: var(--light-blue);
+}
+
+progress {
+  border: none;
+  width: 120px;
+  height: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+progress::-webkit-progress-bar {
+  background-color: white;
+}
+progress::-webkit-progress-value {
+  background-color: var(--light-blue);
+}
+progress::-moz-progress-bar {
+  background-color: white;
+}
+
+@media (min-width: 1024px) {
+  .username {
+    font-size: 40px;
+  }
+
+  .level {
+    font-size: 16px;
+  }
+
+  progress {
+    width: 150px;
+  }
 }
 </style>

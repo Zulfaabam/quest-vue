@@ -38,7 +38,6 @@ const quests = [
   </header>
 
   <main>
-    <!-- <TheWelcome /> -->
     <Avatar />
     <Profile />
     <div class="quest-wrapper">
@@ -59,40 +58,63 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 16px;
   /* border: 1px solid red; */
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+header p {
+  font-size: 12px;
+  max-width: 94px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 28px;
 }
 
 .star-top {
   position: absolute;
   top: -8px;
-  right: -20px;
+  right: -12px;
+  width: 12px;
 }
 
 .star-bottom {
   position: absolute;
-  bottom: -20px;
-  left: -20px;
+  bottom: -16px;
+  left: -12px;
+  width: 12px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
   header {
-    width: 1024px;
+    margin-left: 0;
   }
 
   header h1 {
+    font-size: 36px;
+  }
+
+  header p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header h1 {
     font-size: 64px;
-    font-weight: 600;
   }
 
   header p {
     font-size: 20px;
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 28px;
   }
 
   .quest-wrapper {
@@ -100,6 +122,21 @@ header {
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+
+  .star-top,
+  .star-bottom {
+    width: 24px;
+  }
+
+  .star-top {
+    top: -8px;
+    right: -20px;
+  }
+
+  .star-bottom {
+    bottom: -20px;
+    left: -20px;
   }
 }
 </style>
