@@ -93,6 +93,13 @@ main {
   width: 12px;
 }
 
+.quest-wrapper {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 @media (min-width: 640px) {
   header {
     margin-left: 0;
@@ -119,8 +126,6 @@ main {
 
   .quest-wrapper {
     margin-top: 28px;
-    display: flex;
-    flex-direction: column;
     gap: 24px;
   }
 
