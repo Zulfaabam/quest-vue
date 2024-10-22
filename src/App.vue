@@ -28,29 +28,34 @@ const quests = [
 </script>
 
 <template>
-  <header>
-    <div style="position: relative">
-      <h1>Daily Quest</h1>
-      <StarIcon class="star-bottom" />
-      <StarIcon class="star-top" />
-    </div>
-    <p>{{ today }}</p>
-  </header>
+  <div class="stars stars--sm"></div>
+  <div class="stars stars--md"></div>
 
-  <main>
-    <Avatar />
-    <Profile />
-    <div class="quest-wrapper">
-      <QuestBar
-        v-for="quest in quests"
-        :icon="quest.icon"
-        :title="quest.title"
-        :exp="quest.exp"
-      />
-    </div>
-  </main>
+  <div class="layout">
+    <header>
+      <div style="position: relative">
+        <h1>Daily Quest</h1>
+        <StarIcon class="star-bottom" />
+        <StarIcon class="star-top" />
+      </div>
+      <p>{{ today }}</p>
+    </header>
 
-  <FloatingNav />
+    <main>
+      <Avatar />
+      <Profile />
+      <div class="quest-wrapper">
+        <QuestBar
+          v-for="quest in quests"
+          :icon="quest.icon"
+          :title="quest.title"
+          :exp="quest.exp"
+        />
+      </div>
+    </main>
+
+    <FloatingNav />
+  </div>
 </template>
 
 <style scoped>
@@ -84,6 +89,7 @@ main {
   top: -8px;
   right: -12px;
   width: 12px;
+  animation: shine 3s infinite ease-in-out;
 }
 
 .star-bottom {
@@ -91,6 +97,8 @@ main {
   bottom: -16px;
   left: -12px;
   width: 12px;
+  animation: shine 3s infinite ease-in-out;
+  animation-delay: 500ms;
 }
 
 .quest-wrapper {
@@ -142,6 +150,24 @@ main {
   .star-bottom {
     bottom: -20px;
     left: -20px;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(0.3);
+  }
+  70% {
+    transform: scale(-1, 0);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.3);
   }
 }
 </style>

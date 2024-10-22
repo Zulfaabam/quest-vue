@@ -1,6 +1,7 @@
 @import './base.css';
+@import './stars.css';
 
-#app {
+.layout {
   max-width: 1024px;
   margin: 0 auto;
   padding: 16px 8px;
@@ -9,18 +10,26 @@
 }
 
 @media (min-width: 640px) {
-  #app {
+  .layout {
     padding: 48px;
+  }
+
+  .pixel-corners {
+    border: 8px solid transparent;
+  }
+
+  .pixel-corners::after {
+    margin: -8px;
   }
 }
 
 /* pixelated style border */
 .pixel-corners {
-  border: 8px solid transparent;
+  border: 4px solid transparent;
 }
 
 .pixel-corners::after {
-  margin: -8px;
+  margin: -4px;
 }
 
 .pixel-corners--wrapper {

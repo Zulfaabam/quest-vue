@@ -52,16 +52,16 @@ const navItems = [
   height: 23px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
   .floating-nav {
     bottom: 48px;
-    width: 500px;
-    height: 80px;
+    width: 440px;
+    height: 72px;
   }
 
   .floating-nav ul li a img {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
   }
 }
 

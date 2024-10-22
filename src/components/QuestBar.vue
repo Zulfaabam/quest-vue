@@ -73,11 +73,22 @@ const props = defineProps(['title', 'exp', 'icon']);
   margin-left: 2px;
 }
 
+@media (min-width: 640px) {
+  .quest-bar {
+    width: 600px;
+    padding: 10px 72px;
+    flex-direction: row;
+  }
+  .quest-icon--wrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 @media (min-width: 1024px) {
   .quest-bar {
     width: 916px;
-    padding: 10px 72px;
-    flex-direction: row;
+    padding: 12px 72px;
   }
   .quest-title {
     font-size: 20px;
