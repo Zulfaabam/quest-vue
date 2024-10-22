@@ -19,8 +19,6 @@
 
   --color-text: white;
 
-  --space-bg: url('./space-bg.svg');
-
   --pixel-font: 'Pixelify Sans', sans-serif;
 }
 
@@ -324,9 +322,6 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  /* background-image: var(--space-bg);
-  background-repeat: no-repeat;
-  background-size: cover; */
   background: var(--color-background);
   transition: color 0.5s, background-image 0.5s;
   /* line-height: 1.5; */

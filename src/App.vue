@@ -15,12 +15,12 @@ const quests = [
     exp: '100',
   },
   {
-    icon: '/src/assets/icons/run.svg',
+    icon: '/src/assets/icons/book.svg',
     title: 'Read 4 pages of the Quran or more',
     exp: '1000',
   },
   {
-    icon: '/src/assets/icons/run.svg',
+    icon: '/src/assets/icons/stand.svg',
     title: 'Pray the Salah 5 times',
     exp: '2000',
   },
@@ -64,7 +64,6 @@ header {
   align-items: center;
   justify-content: space-between;
   margin-left: 16px;
-  /* border: 1px solid red; */
 }
 
 header h1 {

@@ -26,12 +26,12 @@ const props = defineProps(['title', 'exp', 'icon']);
 <style>
 .quest-bar {
   background-color: var(--gray-purple);
-  width: 320px;
+  /* width: 320px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  padding: 10px 28px;
+  padding: 10px 20px;
 }
 .quest-details {
   display: flex;
@@ -45,9 +45,13 @@ const props = defineProps(['title', 'exp', 'icon']);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 4px;
+  aspect-ratio: 1/1;
 }
 .quest-icon--wrapper img {
   transform: rotate(-45deg);
+  width: 24px;
+  aspect-ratio: 1/1;
 }
 .quest-title {
   font-size: 16px;
@@ -82,6 +86,11 @@ const props = defineProps(['title', 'exp', 'icon']);
   .quest-icon--wrapper {
     width: 40px;
     height: 40px;
+  }
+  .quest-icon--wrapper img {
+    transform: rotate(-45deg);
+    width: 32px;
+    aspect-ratio: 1/1;
   }
 }
 
